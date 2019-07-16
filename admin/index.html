@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="PROJECT KP">
+    <meta name="author" content="Elvia Nur Anggraini">
 
+    <!-- Title Page-->
     <title>Roccaspace</title>
     <link href="roccaspace.ico" rel="shortcut icon" type="image/x-icon">
     
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
     <!-- Bootstrap CSS CDN -->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" > 
+    
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/solid.css" integrity="sha384-HTDlLIcgXajNzMJv5hiW5s2fwegQng6Hi+fN6t5VAcwO/9qbg2YEANIyKBlqLsiT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/regular.css" integrity="sha384-R7FIq3bpFaYzR4ogOiz75MKHyuVK0iHja8gmH1DHlZSq4tT/78gKAa7nl4PJD7GP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/brands.css" integrity="sha384-KtmfosZaF4BaDBojD9RXBSrq5pNEO79xGiggBxf8tsX+w2dBRpVW5o0BPto2Rb2F" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/fontawesome.css" integrity="sha384-8WwquHbb2jqa7gKWSoAwbJBV2Q+/rQRss9UXL5wlvXOZfSodONmVnifo/+5xJIWX" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6501157cdd.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    
     <!-- MDBootstrap Datatables  -->
     <link href="css/addons/datatables.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -33,59 +60,87 @@
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
 
             <div class="sidebar-header">
-                <img src="logo.png" alt="">
+                <h4><i> ROCCASPACE</i></h4>
+                <strong><i>RC</i></strong>
             </div>
 
             <ul class="list-unstyled components">
-                <p> >- Nama Admin -< </p>
-                <li>
-                    <a id="home">Home</a>
+                <li >
+                    <a id="home">
+                        <i class="fa fa-home"></i> 
+                        <span id="homeTag" >Home</span>
+                    </a>
                 </li>
                 <li>
-                        <a id="schedule">Schedule</a>
+                    <a id="schedule">
+                        <i class="fa fa-calendar-alt"></i> 
+                        <span id="scheduleTag" >Schedule</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#homeSubmenu" style="text-decoration: none" data-toggle="collapse">Service <i class="fas fa-chevron-down" style="position: absolute; right: 5px !important"></i></a>
-                    
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        
+                    <a href="#serviceSubmenu"  id="collapseButtton" data-toggle="collapse" aria-expanded="true" style="text-decoration: none;" >
+                        <i class="fa fa-hand-holding-heart"></i> 
+                        <i class="fas fa-chevron-down" style="position: absolute; right: 12px !important; bottom: 12px "></i>
+                        <span id="serviceTag" >Service</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="serviceSubmenu">
                         <li>
-                            <a id="locker">Locker</a>
+                            <a id="locker">
+                                <i class="fa fa-archive"></i> 
+                                <span id="lockerTag" >Locker</span>
+                            </a>
                         </li>
                         <li>
-                            <a id="refreshment">Refreshment</a>
+                            <a id="refreshment">
+                                <i class="fas fa-coffee"></i>
+                                <span id="refreshmentTag" >Refreshment</span>
+                            </a>
                         </li>
                         <li>
-                            <a id="shower">Shower</a>
+                            <a id="shower">
+                            <i class="fa fa-shower"></i> 
+                            <span id="showerTag" >Shower</span>
+                        </a>
                         </li>
                         <li>
-                            <a id="space">Space</a>
+                            <a id="space">
+                            <i class="fab fa-buromobelexperte"></i>
+                            <span id="spaceTag" >Space</span>
+                        </a>
                         </li>
                     </ul>
+                </li>      
+                <li>
+                    <a id="specialization">
+                    <i class="fa fa-user-shield"></i> 
+                            <span id="specializationTag" >Specialization</span>
+                        </a>
                 </li>
                 <li>
-                    <a id="specialization">Specialization</a>
+                    <a id="trainer">
+                        <i class="fa fa-id-card-alt"></i> 
+                        <span id="trainerTag" >Trainer</span>
+                    </a>
                 </li>
                 <li>
-                    <a id="trainer">Trainer</a>
+                    <a id="transaction">
+                        <i class="fas fa-coins"></i> 
+                        <span id="transactionTag" >Transaction</span>
+                    </a>          
                 </li>
                 <li>
-                    <a id="transaction">Transaction</a>          
+                    <a id="user-management">
+                        <i class="fa fa-user-cog"></i> 
+                        <span id="userTag" >User Management</span>
+                    </a>
                 </li>
-                <li>
-                    <a id="user-management">User Management</a>
-                </li>
-                
             </ul>
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download Rekap Bulanan</a>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download" style="color: #01B2BA !important; text-decoration: none;">Download Rekap Bulanan</a>
                 </li>
             </ul>
         </nav>
@@ -126,15 +181,30 @@
                 </div>
             </nav>
 
-            <div id="content-menu">
-                
-            </div>
-    
+            <div id="content-menu" style="padding: 25px"></div>
+             <!-- END MAIN CONTENT-->
         </div>
-    </div>
+           
 
-    <div class="overlay"></div>
-
+     <!-- Jquery JS-->
+     <script src="vendor/jquery-3.2.1.min.js"></script>
+     <!-- Bootstrap JS-->
+     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+     <!-- Vendor JS       -->
+     <script src="vendor/slick/slick.min.js"></script>
+     <script src="vendor/wow/wow.min.js"></script>
+     <script src="vendor/animsition/animsition.min.js"></script>
+     <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+     </script>
+     <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+     <script src="vendor/counter-up/jquery.counterup.min.js">
+     </script>
+     <script src="vendor/circle-progress/circle-progress.min.js"></script>
+     <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+     <script src="vendor/select2/select2.min.js">
+     </script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
@@ -145,8 +215,10 @@
     <script type="text/javascript" src="js/addons/datatables.min.js"></script>
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+     <!-- Main JS-->
+    <script src="js/main.js"></script>
     <script src="script.js"></script>
-
+    
         
 </body>
 

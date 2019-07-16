@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
+ * opyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -61,7 +61,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 
 [tabindex="-1"]:focus {
@@ -74,7 +73,7 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3,h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -130,7 +129,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 850;
 }
 
 small {
@@ -225,6 +224,7 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  color : #000
 }
 
 button {
@@ -363,32 +363,39 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 850;
   line-height: 1.2;
 }
 
 h1, .h1 {
   font-size: 2.5rem;
+  color: #000;
 }
 
 h2, .h2 {
   font-size: 2rem;
+  color:#000;
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  color: #01B2BA;
+  font-weight: 800;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
 }
 
 h5, .h5 {
   font-size: 1.25rem;
+  color: #000;
 }
 
 h6, .h6 {
   font-size: 1rem;
+  color: #000;
 }
 
 .lead {
@@ -1514,7 +1521,7 @@ pre code {
 
 .table {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #212529;
 }
 
@@ -1522,16 +1529,16 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #dbd9d9;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #dbd9d9;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #dbd9d9;
 }
 
 .table-sm th,
@@ -1540,12 +1547,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 2px solid #dbd9d9;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: 1px solid #dbd9d9;
 }
 
 .table-bordered thead th,
@@ -9988,12 +9995,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
   p,
   h2,
-  h3 {
+  h4 {
     orphans: 3;
     widows: 3;
   }
   h2,
-  h3 {
+  h4 {
     page-break-after: avoid;
   }
   @page {

@@ -52,7 +52,8 @@ div.dataTables_wrapper div.dataTables_filter {
 div.dataTables_wrapper div.dataTables_info {
   font-weight: normal;
   padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  color:#000; }
 
 div.dataTables_wrapper div.dataTables_paginate {
   font-weight: normal;

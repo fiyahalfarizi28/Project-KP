@@ -5,7 +5,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #F5F5F5;
 }
 
 p {
@@ -13,7 +13,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #000;
 }
 
 a,
@@ -29,7 +29,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,28 +46,147 @@ a:focus {
     margin: 40px 0;
 }
 
+i, span {
+    display: inline-block;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    color: #fff;
+}
 
 #sidebar {
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    height: 100vh;
-    z-index: 999;
+    min-width: 250px;
+    max-width: 250px;
     background: #01B2BA;
     color: #fff;
     transition: all 0.3s;
-    overflow-y: scroll;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    
 }
 
 #sidebar.active {
-    left: 0;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
 }
 
+#sidebar.active .sidebar-header h4, #sidebar.active .CTAs {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #01B2BA;
+    font-size: 2em;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1em;
+}
+
+#sidebar ul.components {
+    padding: px 0;
+    border-bottom: 1px solid #01B2BA;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1em;
+    display: block;
+    
+}
+#sidebar ul li a:hover {
+    color: #01B2BA;
+    background: #fff;
+}
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #01B2BA;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="false"] {
+    color: #fff;
+    background: #01B2BA;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #01B2BA;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #01B2BA;
+}
 
 
 #dismiss {
@@ -106,11 +225,6 @@ a:focus {
     opacity: 1;
 }
 
-#sidebar .sidebar-header {
-    padding: 12px;
-    background: #F8F9FA;
-    border: 0.5px
-}
 
 #dropdownMenuButton {
     width: 150px
@@ -121,91 +235,38 @@ a:focus {
     width: 270px;
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #01B2BA;
-}
 
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: #01B2BA;
-    background: #fff;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #01B2BA;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-    color: #fff;
-    background: #01B2BA;
-}
 
 .dropdown-toggle::after {
     
     display: block;
-    position: absolute;
+    position: relative;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
     
 }
 
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #01B2BA;
-}
 
-ul.CTAs {
-    padding: 20px;
-}
 
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #F8F9FA;
-    color: #01B2BA;
-}
-
-a.article,
-a.article:hover {
-    background: #01B2BA !important;
-    color:#F8F9FA !important;
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 
 #content {
+    height: 100%;
     width: 100%;
     padding: 20px;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
     min-height: 100vh;
     transition: all 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
+    color : #000;
 }
+
 
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
@@ -217,5 +278,64 @@ table.dataTable thead .sorting_desc:after,
 table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
-  bottom: .2em;
+  bottom: .2em; 
+  color: #000;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important ;
+    }
+    a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+        top: auto;
+        bottom: 5px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3, #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right:  0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
 }
